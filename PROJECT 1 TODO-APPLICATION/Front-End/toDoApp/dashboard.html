@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - ToDoApp</title>
+  <link rel="stylesheet" href="toDoApp.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand"><h1>ToDoApp</h1></div>
+    <nav class="nav">
+      <a href="homePage.html" class="nav-link">Home</a>
+      <a href="login.html" class="nav-link logout" onclick="logout()">Logout</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container dashboard">
+  <h2 id="welcomeMessage">My Tasks</h2>
+
+  <!-- Global Notification Banner -->
+  <div id="notificationBanner" class="notification" aria-live="polite"></div>
+
+  <!-- Task Form -->
+  <div class="task-form">
+    <input type="text" id="todoInput" placeholder="Enter task..." />
+    <input type="datetime-local" id="dueDateInput" />
+    <small id="dateHelper" class="helper-text">📅 Set a due date for your task</small>
+    <button class="btn primary" onclick="addTodo()">Add Task</button>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters">
+    <span>Filter:</span>
+    <button onclick="filterTodos('all')">All</button>
+    <button onclick="filterTodos('pending')">Pending</button>
+    <button onclick="filterTodos('completed')">Completed</button>
+    <button onclick="filterTodos('dueSoon')">Due Soon</button>
+    <button onclick="filterTodos('overdue')">Overdue</button>
+  </div>
+
+  <!-- Search -->
+  <div class="search-bar">
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="Search task..." 
+      oninput="searchTodos()" 
+      aria-label="Search tasks"
+    />
+  </div>
+
+  <!-- Task Notifications (per-task reminders) -->
+  <div id="notifications" class="notifications"></div>
+
+  <!-- Todo List -->
+  <ul id="todoList" class="task-list">
+    <!-- Tasks will be injected dynamically -->
+    <!-- Each <li> will have:
+         <strong>Task Name</strong>
+         <small>Created: ... | Updated: ... | Due: ...</small>
+    -->
+  </ul>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> ToDoApp — Stay productive</p>
+  </div>
+</footer>
+
+<script src="toDoAppDashboard.js"></script>
+</body>
+</html>

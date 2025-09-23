@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ToDoApp — Stay organized, get more done</title>
+  <link rel="stylesheet" href="toDoApp.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <h1>ToDoApp</h1>
+      </div>
+      <nav class="nav">
+        <a href="homePage.html" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="register.html" class="nav-cta">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h2 class="hero-title">Stay organized. Get more done.</h2>
+          <p class="hero-sub">
+            ToDoApp makes task management simple — create tasks, set due dates, 
+            track progress with created/updated timestamps, and never miss a deadline.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="register.html">Get Started</a>
+            <a class="btn ghost" href="#about">Learn more</a>
+          </div>
+        </div>
+        <div class="hero-illustration" aria-hidden="true">
+          📝
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+      <div class="container">
+        <h3>About ToDoApp</h3>
+        <p>
+          <strong>ToDoApp</strong> is your personal productivity companion. 
+          With user-specific dashboards, you can manage tasks effortlessly:
+        </p>
+        <ul>
+          <li>📝 Add and manage tasks in seconds</li>
+          <li>⏰ Set due dates and get visual alerts for overdue or soon-to-be-due tasks</li>
+          <li>📊 Track created and updated times for better accountability</li>
+          <li>✅ Mark tasks as completed with a single click</li>
+          <li>🔎 Search and filter tasks by keywords</li>
+          <li>⚠️ Stay on top of deadlines with color-coded notifications</li>
+        </ul><br>
+        <div class="about-actions">
+          <a class="btn" href="register.html">Create account</a>
+          <a class="link" href="login.html">Already have an account? Login</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> ToDoApp — Built for focus and productivity.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // auto-update footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

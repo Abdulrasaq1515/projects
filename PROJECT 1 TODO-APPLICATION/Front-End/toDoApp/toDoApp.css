@@ -1,0 +1,484 @@
+/* =============================
+   RESET & BASE STYLES
+   ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #eaf6ff, #ffffff);
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* =============================
+   HEADER & NAVIGATION
+   ============================= */
+.site-header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand h1 {
+  font-size: 28px;
+  color: #4CAF50;
+}
+
+.nav {
+  display: flex;
+  gap: 40px; /* fixed from 50vw */
+}
+
+.nav-link,
+.nav-cta {
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+}
+
+.nav-cta {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.nav-link.logout {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-link.logout:hover {
+  background-color: #d32f2f;
+}
+
+
+/* =============================
+   BUTTONS
+   ============================= */
+.btn {
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn.primary {
+  background-color: #4CAF50;
+  color: white;
+}
+.btn.primary:hover {
+  background-color: #45a049;
+}
+
+.btn.danger {
+  background-color: #f44336;
+  color: white;
+}
+.btn.danger:hover {
+  background-color: #d32f2f;
+}
+
+.btn.ghost {
+  background-color: transparent;
+  border: 2px solid #4CAF50;
+  color: #4CAF50;
+}
+
+/* =============================
+   HOMEPAGE
+   ============================= */
+
+/* Hero Section */
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f0faff, #ffffff);
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero-title {
+  font-size: 36px;
+  color: #333;
+}
+
+.hero-sub {
+  font-size: 18px;
+  color: #555;
+  max-width: 700px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-illustration {
+  font-size: 80px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* About Section */
+.about {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about p {
+  font-size: 16px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.about-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-actions .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+}
+
+.about-actions .link {
+  color: #2196F3;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 18px;
+}
+.about-actions .link:hover {
+  text-decoration: underline;
+}
+
+/* =============================
+   AUTH PAGES (Register, Login, Forgot, Reset)
+   ============================= */
+.auth-page {
+  max-width: 480px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.auth-page h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #333;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fefefe;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.auth-form .btn.primary {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.auth-page p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.auth-page a {
+  color: #2196F3;
+  text-decoration: none;
+}
+.auth-page a:hover {
+  text-decoration: underline;
+}
+
+/* =============================
+   DASHBOARD
+   ============================= */
+.dashboard {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dashboard h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Welcome Message */
+#welcomeMessage {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #4CAF50;
+  text-align: center;
+}
+
+/* Task Form */
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#todoInput {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Search Bar */
+#searchInput {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filters button {
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2196F3;
+  color: white;
+  cursor: pointer;
+}
+.filters button:hover {
+  background-color: #1976D2;
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  background-color: #fefefe;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.task-list li.completed span:first-child {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-list li > div {
+  display: flex;
+  justify-content: space-between; /* fixed alignment */
+  align-items: center;
+  margin-top: 8px;
+  width: 100%;
+}
+
+/* Task name */
+.task-name {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #222;
+}
+
+/* Task dates */
+.task-dates {
+  font-size: 12px;
+  color: #666;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Due date status */
+.due-normal {
+  color: green;
+}
+.due-soon {
+  color: orange;
+  font-weight: bold;
+}
+.due-overdue {
+  color: red;
+  font-weight: bold;
+}
+
+/* Notifications */
+.notifications {
+  margin: 10px 0;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.notifications:empty {
+  display: none;
+}
+
+/* Badges */
+.badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-left: 10px;
+  display: inline-block;
+}
+.badge.red {
+  background-color: #e74c3c;
+  color: white;
+}
+.badge.yellow {
+  background-color: #f1c40f;
+  color: black;
+}
+
+/* Checkbox */
+.task-list input[type="checkbox"] {
+  margin-left: 10px;
+  transform: scale(1.2);
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/* =============================
+   FOOTER
+   ============================= */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #777;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+}
+
+.site-footer span#year {
+  font-weight: bold;
+}
+
+/* Add spacing between task info lines */
+.task-dates small {
+  display: block;
+  margin-top: 3px;
+  font-size: 13px;
+  color: #555;
+}
+
+/* Highlight task being edited (future feature: edit mode) */
+.task-editing {
+  background-color: #fff9c4; /* soft yellow */
+  border-left: 4px solid #fbc02d;
+}
+
+/* Improve notification banner styling */
+#notificationBanner {
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  display: none; /* stays hidden until JS shows */
+}
+#notificationBanner[style*="block"] {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+.helper-text {
+  display: block;
+  font-size: 12px;
+  color: #555;
+  margin-top: 4px;
+  margin-bottom: 12px;
+    transition: opacity 0.3s ease-in-out;
+}
+.error {
+  color: red;
+  font-size: 0.9em;
+  display: block;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+
+
